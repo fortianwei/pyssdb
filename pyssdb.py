@@ -201,7 +201,8 @@ class Client(object):
 
     def __getattr__(self, cmd):
         if cmd not in self.__dict__:
-            self.__dict__[cmd] = functools.partial(self.execute_command, cmd)
+            self.__dict__[cmd] = functools.partial(self.execute_command, 
+                    'del' if cmd == 'delete' else cmd)
 
         return self.__dict__[cmd]
 
