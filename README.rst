@@ -41,6 +41,8 @@ Here is a short example:
     1
     >>> c.get('key')
     'value'
+    >>> c.delete('key')
+    1
     >>> c.hset('hash', 'item', 'value')
     1
     >>> c.hget('hash', 'item')
@@ -57,6 +59,8 @@ Here is a short example:
     ['counter']
     >>> c.keys('a', 'z', 10)
     ['counter', 'key']
+
+As del is a keyword of python, we use delete command instead.
 
 For more information, see `the tutorial <TUTORIAL.rst>`_, which will explain
 most everything.
