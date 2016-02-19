@@ -211,6 +211,7 @@ if __name__ == '__main__':
     c = Client()
     print(c.set('key', 'value'))
     print(c.get('key'))
+    print(c.delete('key'))
     import string
     for i in string.ascii_letters:
         c.incr(i)
